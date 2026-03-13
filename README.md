@@ -44,7 +44,7 @@ analise-risco-credito/
 data/
 notebooks/
 imagens/
-README.md
+README.md/
 requirements.txt
 
 ---
@@ -110,3 +110,4 @@ Após o treinamento e avaliação, o modelo foi aplicado para prever inadimplên
 # 👨‍💻 Autor
 
 Murillo Bernardes
+
