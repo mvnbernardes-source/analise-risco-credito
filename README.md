@@ -1,20 +1,30 @@
 # 📊 Análise de Risco de Crédito
 
-Este projeto tem como objetivo analisar dados de clientes para identificar padrões de inadimplência e desenvolver um modelo de machine learning capaz de prever risco de default.
+Este projeto utiliza técnicas de *Machine Learning* para prever o risco de inadimplência de clientes de cartão de crédito.
 
-A análise combina exploração de dados, engenharia de variáveis e modelagem preditiva.
-
----
-
-# 🎯 Objetivo do Projeto
-
-Identificar fatores associados ao risco de inadimplência e construir um modelo capaz de prever clientes com maior probabilidade de default.
-
-Esse tipo de análise pode apoiar instituições financeiras em decisões de concessão de crédito e gestão de risco.
+O objetivo é identificar padrões associados ao comportamento financeiro dos clientes e construir um modelo capaz de prever a probabilidade de default.
 
 ---
 
-# 🛠️ Tecnologias Utilizadas
+## 🎯 Problema de Negócio
+
+Instituições financeiras precisam avaliar o risco de inadimplência antes de conceder crédito.
+
+Uma análise preditiva permite:
+
+- reduzir perdas financeiras
+- melhorar políticas de concessão de crédito
+- identificar clientes com maior probabilidade de inadimplência
+
+---
+
+## 🎯 Objetivo do Projeto
+
+Desenvolver um modelo de classificação capaz de prever clientes com maior risco de inadimplência utilizando dados históricos de crédito.
+
+---
+
+## 🛠 Tecnologias Utilizadas
 
 - Python
 - Pandas
@@ -22,66 +32,78 @@ Esse tipo de análise pode apoiar instituições financeiras em decisões de con
 - Matplotlib
 - Seaborn
 - Scikit-learn
+- XGBoost
 - Jupyter Notebook
 
 ---
 
-# 📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
-analise-risco-credito
-│
-├── data
-├── imagens
-├── notebooks
-│ ├── EDA_risco_de_credito.ipynb
-│ ├── base_tratada.ipynb
-│ ├── Feature_engineering.ipynb
-│ ├── Modelagem_e_Avaliacao.ipynb
-│ └── Previsao_Novos_Defaults.ipynb
+analise-risco-credito/
+
+data/
+notebooks/
+imagens/
+README.md
+requirements.txt
 
 ---
 
-# 🔎 Análise Exploratória (EDA)
+# 🔎 Análise Exploratória de Dados
 
-Foram analisadas distribuições de variáveis relevantes relacionadas ao comportamento financeiro dos clientes.
+A análise exploratória foi realizada para identificar padrões relacionados ao comportamento financeiro dos clientes.
 
-## Distribuição de Inadimplência
-![Distribuição de Inadimplência](imagens/distribuicao_inadimplencia.png)
+### Distribuição da Inadimplência
 
-## Limite de Crédito vs Inadimplência
-![Limite de Crédito](imagens/distribuicao_limite_credito.png)
+![Distribuição da inadimplência](imagens/distribuicao_inadimplencia.png)
 
-## Fatura e Inadimplência
-![Fatura](imagens/distribuicao_fatura_inadimplencia.png)
+### Limite de Crédito e Inadimplência
 
-## Pagamentos e Inadimplência
-![Pagamentos](imagens/distribuicao_pagamento_inadimplencia.png)
+![Limite de crédito](imagens/distribuicao_limite_credito.png)
 
-## Saldo Recente
-![Saldo](imagens/distribuicao_saldo_recente_inadimplencia.png)
+### Histórico de Pagamentos
 
-## Histórico de Pagamentos
-![Histórico](imagens/historico_pagamentos_inadimplencia.png)
+![Histórico pagamentos](imagens/historico_pagamentos_inadimplencia.png)
 
 ---
 
-# 🤖 Modelagem Preditiva
+# 🤖 Modelagem de Machine Learning
 
-Foi utilizado um modelo de *Random Forest* para prever a probabilidade de inadimplência.
+Foram treinados diferentes algoritmos de classificação para prever inadimplência.
 
-Etapas realizadas:
+Modelos avaliados:
 
-1. Tratamento de dados
-2. Engenharia de variáveis
-3. Divisão treino/teste
-4. Treinamento do modelo
-5. Avaliação de performance
+- Logistic Regression
+- Random Forest
+- XGBoost
 
 ---
 
-# 📈 Resultados
+# 📈 Avaliação dos Modelos
 
-O modelo demonstrou capacidade de identificar padrões relevantes associados ao risco de crédito, permitindo prever potenciais clientes inadimplentes.
+| Modelo | Accuracy |
+|------|------|
+| Logistic Regression | 0.79 |
+| Random Forest | 0.80 |
+| XGBoost | 0.80 |
+
+O modelo *Random Forest* apresentou melhor desempenho geral e foi selecionado para a etapa de previsão.
+
+---
+
+# 📊 Principais Insights
+
+A análise revelou alguns padrões importantes:
+
+- Clientes com histórico irregular de pagamento apresentam maior risco de inadimplência.
+- Variáveis relacionadas ao comportamento de pagamento são fortes preditores de default.
+- O limite de crédito pode influenciar o comportamento de pagamento de determinados perfis de clientes.
+
+---
+
+# 🔮 Aplicação do Modelo
+
+Após o treinamento e avaliação, o modelo foi aplicado para prever inadimplência em novos dados, simulando um cenário real de uso em instituições financeiras.
 
 ---
 
